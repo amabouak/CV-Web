@@ -1,0 +1,545 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="CV de Khamis Amaboua - Développeuse Junior" />
+        <meta name="author" content="Khamis Amaboua" />
+        <title>CV - Khamis Amaboua</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/6588143.png" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Devicons -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;700&family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+        <style>
+            :root {
+                --primary-color: #face68;
+                --secondary-color: #ffea00;
+                --dark-color: #eb9e5a;
+                --light-color: #f0f0ff;
+            }
+            
+            body {
+                font-family: 'Roboto', sans-serif;
+                background-color: var(--dark-color);
+                color: var(--light-color);
+                background-image: url('assets/img/prairies.jpg');
+                background-size: cover;
+                background-attachment: fixed;
+                background-position: center;
+                background-repeat: no-repeat;
+                background-blend-mode: overlay;
+                background-color: rgba(10, 10, 26, 0.8);
+                backdrop-filter: blur(5px);
+                -webkit-backdrop-filter: blur(5px);
+                overflow-x: hidden;
+                scroll-behavior: smooth;
+                -webkit-font-smoothing: antialiased;
+                -moz-osx-font-smoothing: grayscale;
+                font-size: 1rem;
+                /* Suppression du padding-top car la navbar n'est plus fixe */
+            }
+            
+            /* Modification de la navbar pour qu'elle défile avec la page */
+            .top-navbar {
+                position: relative; /* Changement de fixed à relative */
+                width: 100%;
+                background-color: rgba(10, 10, 26, 0.9);
+                backdrop-filter: blur(10px);
+                -webkit-backdrop-filter: blur(10px);
+                border-bottom: 1px solid rgba(110, 0, 255, 0.3);
+                padding: 0.5rem 1rem;
+                z-index: 1030;
+            }
+            
+            .navbar-collapse {
+                justify-content: center;
+            }
+            
+            .navbar-nav {
+                flex-direction: row;
+                gap: 1rem;
+            }
+            
+            h1, h2, h3, h4, h5, h6 {
+                font-family: 'Orbitron', sans-serif;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 1px;
+            }
+            
+            .text-primary {
+                color: var(--primary-color) !important;
+            }
+            
+            .bg-primary {
+                background-color: var(--primary-color) !important;
+            }
+            
+            a {
+                color: var(--secondary-color);
+                text-decoration: none;
+                transition: all 0.3s ease;
+            }
+            
+            a:hover {
+                color: var(--primary-color);
+                text-shadow: 0 0 8px rgba(110, 0, 255, 0.5);
+            }
+            
+            #sideNav {
+                display: none; /* On cache l'ancienne navbar latérale */
+            }
+            
+            .nav-link {
+                color: var(--light-color) !important;
+                position: relative;
+                padding: 0.5rem 1rem !important;
+            }
+            
+            .nav-link:before {
+                content: ">";
+                position: absolute;
+                left: 0;
+                color: var(--secondary-color);
+                opacity: 0;
+                transition: all 0.3s ease;
+            }
+            
+            .nav-link:hover:before {
+                opacity: 1;
+                left: -5px;
+            }
+            
+            .resume-section {
+                padding: 5rem 3rem;
+                position: relative;
+            }
+            
+            .resume-section:before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: linear-gradient(135deg, rgba(110, 0, 255, 0.05) 0%, rgba(0, 247, 255, 0.05) 100%);
+                z-index: -1;
+            }
+            
+            .section-title {
+                position: relative;
+                display: inline-block;
+                margin-bottom: 2rem;
+            }
+            
+            .section-title:after {
+                content: "";
+                position: absolute;
+                bottom: -10px;
+                left: 0;
+                width: 50px;
+                height: 3px;
+                background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
+            }
+            
+            .timeline-item {
+                position: relative;
+                padding-left: 2rem;
+                margin-bottom: 2rem;
+                border-left: 2px solid var(--primary-color);
+            }
+            
+            .timeline-item:before {
+                content: "";
+                position: absolute;
+                left: -8px;
+                top: 5px;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: var(--secondary-color);
+                box-shadow: 0 0 10px var(--secondary-color);
+            }
+            
+            .skill-badge {
+                display: inline-block;
+                padding: 0.5rem 1rem;
+                margin: 0.25rem;
+                background: rgba(110, 0, 255, 0.2);
+                border: 1px solid var(--primary-color);
+                border-radius: 20px;
+                font-size: 0.9rem;
+                transition: all 0.3s ease;
+            }
+            
+            .skill-badge:hover {
+                background: var(--primary-color);
+                transform: translateY(-3px);
+                box-shadow: 0 5px 15px rgba(110, 0, 255, 0.3);
+            }
+            
+            .social-icon {
+                display: inline-flex;
+                align-items: center;
+                justify-content: center;
+                width: 3rem;
+                height: 3rem;
+                background: rgba(110, 0, 255, 0.2);
+                border: 1px solid var(--primary-color);
+                border-radius: 50%;
+                margin-right: 1rem;
+                transition: all 0.3s ease;
+            }
+            
+            .social-icon:hover {
+                background: var(--primary-color);
+                transform: translateY(-5px) scale(1.1);
+                box-shadow: 0 5px 20px rgba(110, 0, 255, 0.4);
+            }
+            
+            .tech-icons {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 1.5rem;
+                margin: 1.5rem 0;
+            }
+            
+            .tech-icon {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                transition: all 0.3s ease;
+            }
+            
+            .tech-icon i {
+                font-size: 2.5rem;
+                margin-bottom: 0.5rem;
+                color: var(--secondary-color);
+                transition: all 0.3s ease;
+            }
+            
+            .tech-icon span {
+                font-size: 0.8rem;
+                text-align: center;
+            }
+            
+            .tech-icon:hover {
+                transform: translateY(-5px);
+            }
+            
+            .tech-icon:hover i {
+                color: var(--primary-color);
+                filter: drop-shadow(0 0 8px rgba(110, 0, 255, 0.5));
+            }
+            
+            @media (max-width: 768px) {
+                .resume-section {
+                    padding: 3rem 1.5rem;
+                }
+                
+                .tech-icons {
+                    gap: 1rem;
+                }
+                
+                .tech-icon i {
+                    font-size: 2rem;
+                }
+                
+                .navbar-nav {
+                    gap: 0.5rem;
+                }
+                
+                .nav-link {
+                    padding: 0.3rem 0.5rem !important;
+                    font-size: 0.9rem;
+                }
+            }
+        </style>
+    </head>
+    <body id="page-top">
+        <!-- Navigation qui défile avec la page -->
+        <nav class="navbar navbar-expand-lg navbar-dark top-navbar">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">À Propos</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Expériences</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Formations</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Compétences</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Intérêts</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#certifications">Certifications</a></li>
+                </ul>
+            </div>
+        </nav>
+
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Khamis
+                        <span class="text-primary">Amaboua</span>
+                    </h1>
+                    <div class="subheading mb-3">
+                        Développeuse Junior · Dakar, Fass · 
+                        +221 784418147 ·
+                        amabouak@gmail.com
+                    </div>
+                    <p class="lead mb-4">Développeuse junior passionnée par les technologies web et la cybersécurité. Créative, rigoureuse et proactive, je suis à la recherche d'opportunités pour mettre en pratique mes compétences techniques tout en continuant à apprendre et à m'améliorer.</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="https://www.linkedin.com/in/khamis-amaboua-134550282/" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/amabouak"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" style="border-top: 1px solid rgba(209, 199, 222, 0.3);" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="section-title mb-5">Expériences Professionnelles et Associatives</h2>
+                    
+                    <div class="timeline-item">
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                            <div class="flex-grow-1">
+                                <h3 class="mb-0">Stage</h3>
+                                <div class="subheading mb-2">Agence de Voyage Biba Horizon Services (BHS)</div>
+                                <p>Stage professionnel dans une agence de voyage, avec des responsabilités telles que le support technique aux collaborateurs pour l'utilisation des outils informatiques, la gestion des réservations et des demandes clients, et la mise à jour du site web de l'agence.</p>
+                            </div>
+                            <div class="flex-shrink-0"><span class="text-primary">Juillet 2022 - Décembre 2022</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                            <div class="flex-grow-1">
+                                <h3 class="mb-0">Membre & Trésorière</h3>
+                                <div class="subheading mb-2">Associations ASSODEV & AL-OKOUA AGRO-DEV (AODEV)</div>
+                                <ul>
+                                    <li>Membre active de l'Association pour la Solidarité et le Développement (ASSODEV)</li>
+                                    <li>Trésorière de l'Association AL-OKOUA AGRO-DEV (AODEV)</li>
+                                </ul>
+                            </div>
+                            <div class="flex-shrink-0"><span class="text-primary">2019 - Aujourd'hui</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" style="border-top: 1px solid rgba(110, 0, 255, 0.3);" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="section-title mb-5">Formations</h2>
+                    
+                    <div class="timeline-item">
+                        <div class="d-flex flex-column flex-md-row justify-content-between mb-4">
+                            <div class="flex-grow-1">
+                                <h3 class="mb-0">Licence 1/2 Génie Informatique</h3>
+                                <div class="subheading mb-2">SUPDECO Dakar (ESITEC)</div>
+                            </div>
+                            <div class="flex-shrink-0"><span class="text-primary">2023 - 2025</span></div>
+                        </div>
+                    </div>
+                    
+                    <div class="timeline-item">
+                        <div class="d-flex flex-column flex-md-row justify-content-between">
+                            <div class="flex-grow-1">
+                                <h3 class="mb-0">Baccalauréat</h3>
+                                <div class="subheading mb-2">La Lumière du Savoir</div>
+                            </div>
+                            <div class="flex-shrink-0"><span class="text-primary">2022</span></div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" style="border-top: 1px solid rgba(110, 0, 255, 0.3);" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="section-title mb-5">Compétences</h2>
+                    
+                    <div class="subheading mb-3">Langages de Programmation</div>
+                    <div class="tech-icons">
+                        <div class="tech-icon">
+                            <i class="devicon-html5-plain colored"></i>
+                            <span>HTML5</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-css3-plain colored"></i>
+                            <span>CSS3</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-javascript-plain colored"></i>
+                            <span>JavaScript</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-python-plain colored"></i>
+                            <span>Python</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-c-plain colored"></i>
+                            <span>C</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-mysql-plain colored"></i>
+                            <span>SQL</span>
+                        </div>
+                    </div>
+                    
+                    <div class="subheading mb-3">Logiciels & Outils</div>
+                    <div class="tech-icons">
+                        <div class="tech-icon">
+                            <i class="devicon-vscode-plain colored"></i>
+                            <span>VS Code</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-intellij-plain colored"></i>
+                            <span>IntelliJ</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-xd-plain colored"></i>
+                            <span>Packet Tracer</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-apache-plain colored"></i>
+                            <span>XAMPP</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-blender-original colored"></i>
+                            <span>Blender</span>
+                        </div>
+                    </div>
+                    
+                    <div class="subheading mb-3">Bases de Données</div>
+                    <div class="tech-icons">
+                        <div class="tech-icon">
+                            <i class="devicon-mysql-plain colored"></i>
+                            <span>MySQL</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-mysql-plain colored"></i>
+                            <span>MariaDB</span>
+                        </div>
+                    </div>
+                    
+                    <div class="subheading mb-3">Savoir-Être</div>
+                    <div>
+                        <span class="skill-badge">Créativité</span>
+                        <span class="skill-badge">Rigueur</span>
+                        <span class="skill-badge">Proactivité</span>
+                        <span class="skill-badge">Organisation</span>
+                        <span class="skill-badge">Autonomie</span>
+                        <span class="skill-badge">Dynamisme</span>
+                        <span class="skill-badge">Travail en équipe</span>
+                        <span class="skill-badge">Gestion de projet</span>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" style="border-top: 1px solid rgba(110, 0, 255, 0.3);" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="section-title mb-5">Passions & Intérêts</h2>
+                    <p>En dehors du développement informatique, je m'intéresse à divers domaines qui nourrissent ma créativité et ma curiosité intellectuelle.</p>
+                    <div class="row mt-4">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-laptop-code me-3 text-primary" style="font-size: 1.5rem;"></i>
+                                <h4 class="mb-0">Informatique</h4>
+                            </div>
+                            <p>Passionnée par les nouvelles technologies, le développement web et la cybersécurité.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-book me-3 text-primary" style="font-size: 1.5rem;"></i>
+                                <h4 class="mb-0">Lecture & Écriture</h4>
+                            </div>
+                            <p>Grande lectrice et amatrice d'écriture créative.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-palette me-3 text-primary" style="font-size: 1.5rem;"></i>
+                                <h4 class="mb-0">Dessin</h4>
+                            </div>
+                            <p>Pratique régulière du dessin comme moyen d'expression artistique.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-star me-3 text-primary" style="font-size: 1.5rem;"></i>
+                                <h4 class="mb-0">Astronomie</h4>
+                            </div>
+                            <p>Fascinée par l'astronomie et l'exploration spatiale.</p>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-center mb-3">
+                                <i class="fas fa-futbol me-3 text-primary" style="font-size: 1.5rem;"></i>
+                                <h4 class="mb-0">Football</h4>
+                            </div>
+                            <p>Passionnée de football, aussi bien comme spectatrice que comme pratiquante.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" style="border-top: 1px solid rgba(110, 0, 255, 0.3);" />
+            <!-- Awards-->
+            <section class="resume-section" id="certifications">
+                <div class="resume-section-content">
+                    <h2 class="section-title mb-5">Certifications & Badges</h2>
+                    <div class="row">
+                        <div class="col-md-6 mb-4">
+                            <div class="card bg-white border-primary h-100">
+                                <div class="card-body">
+                                    <h4 class="card-title text-primary">ANSSI (SecNum Académie)</h4>
+                                    <p class="card-text">Certification en cybersécurité délivrée par l'Agence Nationale de la Sécurité des Systèmes d'Information.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6 mb-4">
+                            <div class="card bg-white border-primary h-100">
+                                <div class="card-body">
+                                    <h4 class="card-title text-primary">Cisco Networking Academy</h4>
+                                    <p class="card-text">Certificat de fin de cours d'introduction à la cybersécurité.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card bg-white border-primary h-100">
+                                <div class="card-body">
+                                    <h4 class="card-title text-primary">CyberLand Sec</h4>
+                                    <p class="card-text">Certified Ethical Hacking & Penetration TesterCertified Ethical Hacking & Penetration Tester.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script>
+            // Smooth scrolling for navigation links
+            document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+                anchor.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    
+                    const targetId = this.getAttribute('href');
+                    const targetElement = document.querySelector(targetId);
+                    const targetPosition = targetElement.offsetTop;
+                    
+                    window.scrollTo({
+                        top: targetPosition,
+                        behavior: 'smooth'
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>
