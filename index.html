@@ -23,6 +23,25 @@
                 --light-color: #f0f0ff;
             }
             
+            /* Icônes personnalisées pour Wireshark et Metasploit */
+            .devicon-wireshark-plain:before {
+                content: "";
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMTIgMkM2LjUgMiAyIDYuNSAyIDEydjEwYzAgMS4xLjkgMiAyIDJoMTBjNS41IDAgMTAtNC41IDEwLTEwVjRjMC0xLjEtLjktMi0yLTJIMTJ6bTAgMTguNWMtNC43IDAtOC41LTMuOC04LjUtOC41UzcuMyAzLjUgMTIgMy41czguNSAzLjggOC41IDguNS0zLjggOC41LTguNSA4LjV6bTEuMS0xMy44bC0uOC0uOGMtLjItLjItLjUtLjItLjcgMEw5LjMgOS44bC0xLjEtMS4xYy0uMi0uMi0uNS0uMi0uNyAwbC0uOC44Yy0uMi4yLS4yLjUgMCAuN2wxLjUgMS41Yy4yLjIuNS4yLjcgMGwuOC0uOCAzLjIgMy4yYy4yLjIuNS4yLjcgMGwzLjctMy43Yy4yLS4yLjItLjUgMC0uN2wtLjgtLjhjLS4yLS4yLS41LS4yLS43IDBsLTIuOCAyLjh6Ii8+PC9zdmc+');
+                background-size: contain;
+            }
+            
+            .devicon-metasploit-plain:before {
+                content: "";
+                display: inline-block;
+                width: 1em;
+                height: 1em;
+                background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0iY3VycmVudENvbG9yIiBkPSJNMTIgMkM2LjUgMiAyIDYuNSAyIDEydjEwYzAgMS4xLjkgMiAyIDJoMTBjNS41IDAgMTAtNC41IDEwLTEwVjRjMC0xLjEtLjktMi0yLTJIMTJ6bTAgMTguNWMtNC43IDAtOC41LTMuOC04LjUtOC41UzcuMyAzLjUgMTIgMy41czguNSAzLjggOC41IDguNS0zLjggOC41LTguNSA4LjV6bTEtMTIuN2gtMnY3aDJ2LTd6bTAgM2gtMnY0aDJ2LTR6Ii8+PC9zdmc+');
+                background-size: contain;
+            }
+            
             body {
                 font-family: 'Roboto', sans-serif;
                 background-color: var(--dark-color);
@@ -41,12 +60,10 @@
                 -webkit-font-smoothing: antialiased;
                 -moz-osx-font-smoothing: grayscale;
                 font-size: 1rem;
-                /* Suppression du padding-top car la navbar n'est plus fixe */
             }
             
-            /* Modification de la navbar pour qu'elle défile avec la page */
             .top-navbar {
-                position: relative; /* Changement de fixed à relative */
+                position: relative;
                 width: 100%;
                 background-color: rgba(10, 10, 26, 0.9);
                 backdrop-filter: blur(10px);
@@ -92,7 +109,7 @@
             }
             
             #sideNav {
-                display: none; /* On cache l'ancienne navbar latérale */
+                display: none;
             }
             
             .nav-link {
@@ -400,8 +417,12 @@
                             <span>VS Code</span>
                         </div>
                         <div class="tech-icon">
-                            <i class="devicon-intellij-plain colored"></i>
-                            <span>IntelliJ</span>
+                            <i class="devicon-wireshark-plain colored"></i>
+                            <span>Wireshark</span>
+                        </div>
+                        <div class="tech-icon">
+                            <i class="devicon-metasploit-plain colored"></i>
+                            <span>Metasploit</span>
                         </div>
                         <div class="tech-icon">
                             <i class="devicon-xd-plain colored"></i>
@@ -513,7 +534,7 @@
                             <div class="card bg-white border-primary h-100">
                                 <div class="card-body">
                                     <h4 class="card-title text-primary">CyberLand Sec</h4>
-                                    <p class="card-text">Certified Ethical Hacking & Penetration TesterCertified Ethical Hacking & Penetration Tester.</p>
+                                    <p class="card-text">Certified Ethical Hacking & Penetration Tester.</p>
                                 </div>
                             </div>
                         </div>
